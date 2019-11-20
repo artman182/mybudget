@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      $(document).ready(function(){
+        
+        $( "billinput.bill1 .plus" ).click(function() {
+             $('bill.one').css("display","block");
+          });
+        
+        $( "billinput.bill2 .plus" ).click(function() {
+             $('bill.two').css("display","block");
+          });
+        
+        $( "billinput.bill3 .plus" ).click(function() {
+             $('bill.three').css("display","block");
+          });
+        
+        $( "billinput.bill4 .plus" ).click(function() {
+             $('bill.four').css("display","block");
+          });
+        
+        $( "billinput.bill5 .plus" ).click(function() {
+             $('bill.five').css("display","block");
+          });
+        
+        $( "billinput.bill6 .plus" ).click(function() {
+             $('bill.six').css("display","block");
+          });
+        
+        $( "billinput.bill7 .plus" ).click(function() {
+             $('bill.seven').css("display","block");
+          });
+        
+        $( "billinput.bill8 .plus" ).click(function() {
+             $('bill.eight').css("display","block");
+          });
+          
+        
+        $( "billinput.bill9 .plus" ).click(function() {
+             $('bill.nine').css("display","block");
+          });
+        });
+    </script>
+  
+  </head>
+
+  <body ng-app="myApp" ng-controller="myCtrl" ng-init="gas=30; sb=48; sbsub='Daycare'">
+    
+    <h1>My Budget Helper</h1>
+    
+    <instructions>Fill out the fields appropriately. 
+    For the bills, click the + icon to make the bill appear in the totals section.
+    </instructions>
+    
+    <section class="maininput">
+      
+    <p>Check:<br />
+    $<input type="number" ng-model="check" />
+    </p>
+    
+    <p>How much carries over?<br />
+    $<input type="number" ng-model="carry" /></p>
+    
+    <p>Deposit Day: <em>Day of the week, then numbers for month and date. ex: Tues, 7, 21</em><br />
+    <input type="text" ng-model="cday" /> 
+    <input type="number" ng-model="cmonth" class="short" /> 
+    <input type="number" ng-model="cdate" class="short" /> </p>
+    
+        <billinput class="bill1"><strong>Bill 1:</strong><br />
+      <leftbill>Date:</leftbill>
+      <rightbill><input type="number" ng-model="b1month" class="short" /> / 
+    <input type="number" ng-model="b1date" class="short" /></rightbill>
+    <leftbill>Amount:</leftbill> 
+    <rightbill><input type="number" ng-model="b1"></rightbill>
+    <leftbill>Subject:</leftbill>
+    <rightbill><input type="text" ng-model="b1sub" /> <a href="" class="plus"> </a></rightbill>
+    </billinput>
+    
+   <billinput class="bill2"><strong>Bill 2:</strong><br />
+      <leftbill>Date:</leftbill>
+      <rightbill><input type="number" ng-model="b2month" class="short" /> / 
+    <input type="number" ng-model="b2date" class="short" /></rightbill>
+    <leftbill>Amount:</leftbill> 
+    <rightbill><input type="number" ng-model="b2"></rightbill>
+    <leftbill>Subject:</leftbill>
+    <rightbill><input type="text" ng-model="b2sub" /> <a href="" class="plus"> </a></rightbill>
+    </billinput>
+    
+   <billinput class="bill3"><strong>Bill 3:</strong><br />
+      <leftbill>Date:</leftbill>
+      <rightbill><input type="number" ng-model="b3month" class="short" /> / 
+    <input type="number" ng-model="b3date" class="short" /></rightbill>
+    <leftbill>Amount:</leftbill> 
+    <rightbill><input type="number" ng-model="b3"></rightbill>
+    <leftbill>Subject:</leftbill>
+    <rightbill><input type="text" ng-model="b3sub" /> <a href="" class="plus"> </a></rightbill>
+    </billinput>
+    
+   <billinput class="bill4"><strong>Bill 4:</strong><br />
+      <leftbill>Date:</leftbill>
+      <rightbill><input type="number" ng-model="b4month" class="short" /> / 
+    <input type="number" ng-model="b4date" class="short" /></rightbill>
+    <leftbill>Amount:</leftbill> 
+    <rightbill><input type="number" ng-model="b4"></rightbill>
+    <leftbill>Subject:</leftbill>
+    <rightbill><input type="text" ng-model="b4sub" /> <a href="" class="plus"> </a></rightbill>
+    </billinput>
+    
+   <billinput class="bill5"><strong>Bill 5:</strong><br />
+      <leftbill>Date:</leftbill>
+      <rightbill><input type="number" ng-model="b5month" class="short" /> / 
+    <input type="number" ng-model="b5date" class="short" /></rightbill>
+    <leftbill>Amount:</leftbill> 
+    <rightbill><input type="number" ng-model="b5"></rightbill>
+    <leftbill>Subject:</leftbill>
+    <rightbill><input type="text" ng-model="b5sub" /> <a href="" class="plus"> </a></rightbill>
+    </billinput>
+    
+   <billinput class="bill6"><strong>Bill 6:</strong><br />
+      <leftbill>Date:</leftbill>
+      <rightbill><input type="number" ng-model="b6month" class="short" /> / 
+    <input type="number" ng-model="b6date" class="short" /></rightbill>
+    <leftbill>Amount:</leftbill> 
+    <rightbill><input type="number" ng-model="b6"></rightbill>
+    <leftbill>Subject:</leftbill>
+    <rightbill><input type="text" ng-model="b6sub" /> <a href="" class="plus"> </a></rightbill>
+    </billinput>
+    
+   <billinput class="bill7"><strong>Bill 7:</strong><br />
+      <leftbill>Date:</leftbill>
+      <rightbill><input type="number" ng-model="b7month" class="short" /> / 
+    <input type="number" ng-model="b7date" class="short" /></rightbill>
+    <leftbill>Amount:</leftbill> 
+    <rightbill><input type="number" ng-model="b7"></rightbill>
+    <leftbill>Subject:</leftbill>
+    <rightbill><input type="text" ng-model="b7sub" /> <a href="" class="plus"> </a></rightbill>
+    </billinput>
+    
+    <billinput class="bill8 clear"><strong>Special Bill With No Specific Date:</strong><br />
+    <leftbill>Amount:</leftbill> 
+    <rightbill><input type="number" ng-model="sb"></rightbill>
+   <leftbill>Subject:</leftbill> 
+   <rightbill><input type="text" ng-model="sbsub" /> <a href="" class="plus"> </a><br /></rightbill>
+    </billinput>
+    
+    <billinput class="bill9 clear"><strong>Estimate Vehicle Gas:</strong><br />
+    <leftbill>Amount:</leftbill> 
+    <rightbill><input type="number" ng-model="gas"> <a href="" class="plus"> </a></rightbill>
+    </billinput>
+    
+    </section>
+    <div class="clear"></div>
+    <hr>
+   
+    <section class="results" select-text>
+    <p>${{ check  }} deposit on {{ cday }} {{ cmonth }}/{{ cdate }} + ${{ carry }}</p>
+    
+    <bills>
+      <bill class="one">{{ [b1month] + "/" + [b1date] + ": $" + [b1] + " " + [b1sub] }}</bill>
+      <bill class="two">{{ [b2month] + "/" + [b2date] + ": $" + [b2] + " " + [b2sub] }}</bill>
+      <bill class="three">{{ [b3month] + "/" + [b3date] + ": $" + [b3] + " " + [b3sub] }}</bill>
+      <bill class="four">{{ [b4month] + "/" + [b4date] + ": $" + [b4] + " " + [b4sub] }}</bill>
+      <bill class="five">{{ [b5month] + "/" + [b5date] + ": $" + [b5] + " " + [b5sub] }}</bill>
+      <bill class="six">{{ [b6month] + "/" + [b6date] + ": $" + [b6] + " " + [b6sub] }}</bill>
+      <bill class="seven">{{ [b7month] + "/" + [b7date] + ": $" + [b7] + " " + [b7sub] }}</bill>
+      <bill class="eight">{{"$" + [sb] + " " + [sbsub] }}</bill>
+      <bill class="nine">Plus around ${{ gas }} for gas</bill>
+    </bills>
+    
+    <subtotal><span>Bills Total:</span> 
+    ${{ b1 + b2 + b3 + b4 + b5 + b6 + b7 + sb + gas + daycare }}
+    </subtotal>
+    
+    <total><span>Leftover:</span> 
+    ${{ [check + carry] - [b1 + b2 + b3 + b4 + b5 + b6 + b7 + sb + gas + daycare] }}
+    </total>
+
+    </section><br />
+    
+    <hr>
+    
+    <h3>For Easier Selecting on Mobile:</h3>
+    
+    <textarea rows="20" cols="70">
+${{ check  }} deposit on {{ cday }} {{ cmonth }}/{{ cdate }} + ${{ carry }}
+    
+{{ [b1month] + "/" + [b1date] + ": $" + [b1] + " " + [b1sub] }}
+{{ [b2month] + "/" + [b2date] + ": $" + [b2] + " " + [b2sub] }}
+{{ [b3month] + "/" + [b3date] + ": $" + [b3] + " " + [b3sub] }}
+{{ [b4month] + "/" + [b4date] + ": $" + [b4] + " " + [b4sub] }}
+{{ [b5month] + "/" + [b5date] + ": $" + [b5] + " " + [b5sub] }}
+{{ [b6month] + "/" + [b6date] + ": $" + [b6] + " " + [b6sub] }}
+{{ [b7month] + "/" + [b7date] + ": $" + [b7] + " " + [b7sub] }}
+{{"$" + [sb] + " " + [sbsub] }}
+Plus around ${{ gas }} for gas
+    
+Bills Total: ${{ b1 + b2 + b3 + b4 + b5 + b6 + b7 + sb + gas + daycare }}
+    
+Leftover: ${{ [check + carry] - [b1 + b2 + b3 + b4 + b5 + b6 + b7 + sb + gas + daycare] }}
+    
+    </textarea>
+    
+  </body>
+
+</html>
